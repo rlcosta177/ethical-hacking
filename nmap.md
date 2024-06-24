@@ -18,5 +18,4 @@ UDP Scans (-sU)
 
 - Its important to note that, if you send a SYN flag to a closed port, the receiving machine will respond with a RST flag, that is because of the RFC9293 which states that any closed port will respond with RST to any incoming flag that isnt RST
 
-![alt text](https://i.imgur.com/vUQL9SK.png)
 ![vUQL9SK](https://github.com/rlcosta177/ethical-hacking/assets/154469533/4fb9d990-cda9-4e5d-afba-c69b18bc571a)
