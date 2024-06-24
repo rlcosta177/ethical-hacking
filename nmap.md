@@ -39,10 +39,15 @@ SYN scans (-sS) are essencially stealthy because they send a SYN flag followed b
 
 ![cPzF0kU](https://github.com/rlcosta177/ethical-hacking/assets/154469533/73af9915-6c32-40c6-9bbf-2c0088534e91)
 
+---
 
+## UDP Scans
 
+Unlike TCP, UDP connections are stateless. This means that, rather than initiating a connection with a back-and-forth "handshake", UDP connections rely on sending packets to a target port and essentially hoping that they make it. This makes UDP superb for connections which rely on speed over quality (e.g. video sharing), but the lack of acknowledgement makes UDP significantly more difficult (and much slower) to scan. The switch for an Nmap UDP scan is (-sU)
 
+When a packet is sent to an open UDP port, there should be no response. When this happens, Nmap refers to the port as being `open|filtered`. In other words, it suspects that the port is open, but it could be firewalled. 
 
+![23123](https://github.com/rlcosta177/ethical-hacking/assets/154469533/a0b755a9-21a8-438b-bc78-19e25d950312)
 
 
 
