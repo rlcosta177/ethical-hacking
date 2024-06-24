@@ -25,5 +25,6 @@ UDP Scans (-sU)
 ### Possibility Two
 - If the target machine is hidden behind a firewall, its likely that it is configured to **drop** any incoming packets. Nmap sends a TCP SYN request, and receives nothing back. This indicates that the port is being protected by a firewall and thus the port is considered to be **filtered**.
 
-![Uploading filtered-nmap.png…]()
+![filtered-nmap](https://github.com/rlcosta177/ethical-hacking/assets/154469533/3772794e-5759-4f14-a46a-468000a114f0)
+
 
