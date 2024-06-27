@@ -1,4 +1,4 @@
-## Walkthrough 
+# Solving the ctf 
 1. `sudo aircrack-ng -w /usr/share/wordlists/rockyou.txt -b 02:1A:11:FF:D9:BD -e 'James Honor 8' NinjaJc01-01.cap`
 2. found the password: greeneggsandham
 
