@@ -7,6 +7,7 @@
 -sS [syn scan: stealthy]
 -sU [scans udp ports]
 
+-sC [bundle of scripts that help gather info(may be aggressive like -A)]
 -sV [detects version of services]
 -sP [ping scan]
 -Pn [assumes all ports as up]
