@@ -1,6 +1,15 @@
 # Solving the ctf 
-1. `sudo aircrack-ng -w /usr/share/wordlists/rockyou.txt -b 02:1A:11:FF:D9:BD -e 'James Honor 8' NinjaJc01-01.cap`
-2. found the password: greeneggsandham
+  1. `sudo aircrack-ng -w /usr/share/wordlists/rockyou.txt -b 02:1A:11:FF:D9:BD -e 'James Honor 8' NinjaJc01-01.cap`
+  2. found the password: greeneggsandham
+
+---
+
+## Life cycle
+  ```sh
+  1. use airmon-ng to enter monitor mode
+  2. use airdump-ng to capture packets passing through the interface(monitor mode interface) into pcap files
+  4. use aircrack-ng to crack the password from the pcap file
+  ```
 
 ---
 
@@ -18,6 +27,7 @@
     - `-c <channel>`: Specifies the channel of the target network.
     - -`b <BSSID>`: Specifies the BSSID (MAC address) of the target access point.
     - `-w capture`: Writes captured packets to a file named capture-01.cap (increments the file number for subsequent captures).
+
 ---
 
 ## Aircrack-ng(captures the hash of the passphrase from the 4-way-handshake)
@@ -52,12 +62,3 @@
     - `-a 00:11:22:33:44:55`: The MAC address of the target access point.
     - `wlan0mon`: Your wireless interface in monitor mode.
   </details>
-
-
----
-
-## Life cycle
-1. use airmon-ng to enter monitor mode
-2. use airdump-ng to capture packets passing through the interface(monitor mode interface) into pcap files
-4. use aircrack-ng to crack the password from the pcap file
-5. 
