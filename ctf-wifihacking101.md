@@ -14,6 +14,10 @@
 ## Airodump-ng(captures packets from an interface in monitor mode)
   - `sudo airodump-ng wlan0mon`
 
+  - example use: `sudo airodump-ng -c <channel> --bssid <BSSID> -w capture wlan0mon`
+    - `-c <channel>`: Specifies the channel of the target network.
+    - -`b <BSSID>`: Specifies the BSSID (MAC address) of the target access point.
+    - `-w capture`: Writes captured packets to a file named capture-01.cap (increments the file number for subsequent captures).
 ---
 
 ## Aircrack-ng(captures the hash of the passphrase from the 4-way-handshake)
@@ -48,3 +52,12 @@
     - `-a 00:11:22:33:44:55`: The MAC address of the target access point.
     - `wlan0mon`: Your wireless interface in monitor mode.
   </details>
+
+
+---
+
+## Life cycle
+1. use airmon-ng to enter monitor mode
+2. use airdump-ng to capture packets passing through the interface(monitor mode interface) into pcap files
+4. use aircrack-ng to crack the password from the pcap file
+5. 
