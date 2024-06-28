@@ -33,6 +33,8 @@
     - `wlan0mon`: Yor wireless interface in monitor mode
   </details>
 
+
+
   deauthenticate all clients:
   <details closed>
     - example use: `sudo aireplay-ng --deauth 0 -a 00:11:22:33:44:55 wlan0mon`
