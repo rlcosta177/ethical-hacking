@@ -8,5 +8,5 @@ documentation of my knowlage so far
 - John
 - Nmap
 - Burp(proxy, intruder, repeater)
-- Reverse shell scripts
+- Reverse shell scripts [https://github.com/pentestmonkey/php-reverse-shell]
 - linpeas.sh(enumeration inside the target machine)
