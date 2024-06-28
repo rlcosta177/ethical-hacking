@@ -30,7 +30,7 @@
 
 ---
 
-## Aircrack-ng(captures the hash of the passphrase from the 4-way-handshake)
+## Aircrack-ng(cracks the hash of the passphrase from the 4-way-handshake pcap file)
   - Important switches
   ```sh
   -b (to specify the bssid)
