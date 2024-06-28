@@ -4,7 +4,7 @@
 
 ---
 
-## Life cycle
+## Wifi Hacking Workflow(Deauthentication Attack Method)
   ```sh
   1. use airmon-ng to enter monitor mode
   2. [opcional] force the clients from the target network to de-authenticate to speed up the process of gathering the 4 way handshake
