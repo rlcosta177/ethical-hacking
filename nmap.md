@@ -20,6 +20,8 @@
 
 -p [port range]
 -v{1-3} [verbose]
+
+-sn [ping sweep]
 ```
 ---
 
