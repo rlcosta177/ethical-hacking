@@ -1,5 +1,3 @@
-## For better understanding, use a honeypot and scan it with nmap
-
 ## Important Nmap switches
 
 ```sh
