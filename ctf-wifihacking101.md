@@ -14,14 +14,14 @@
 
 ---
 
-## Armon-ng(used to change interaces into monitor mode)
+## 1. Armon-ng(used to change interaces into monitor mode)
   - monitor mode: `sudo airmon-ng start wlan0` (assuming wlan0 is your interface's name)
   - the name will likely be: `wlan0mon`
   - kill processes using that network adapter: `airmon-ng check kill`
 
 ---
 
-## Aireplay-ng(force the clients to deauth to speed up the process of getting the passwd hash)
+## 2. Aireplay-ng(force the clients to deauth to speed up the process of getting the passwd hash)
   
   ### deauthenticate specific client:
   <details closed>
@@ -44,7 +44,7 @@
 
 ---
 
-## Airodump-ng(captures packets from an interface in monitor mode)
+## 3. Airodump-ng(captures packets from an interface in monitor mode)
   - `sudo airodump-ng wlan0mon`
 
   - example use: `sudo airodump-ng -c <channel> --bssid <BSSID> -w capture wlan0mon`
@@ -54,7 +54,7 @@
 
 ---
 
-## Aircrack-ng(cracks the hash of the passphrase from the 4-way-handshake pcap file)
+## 4. Aircrack-ng(cracks the hash of the passphrase from the 4-way-handshake pcap file)
   - Important switches
   ```sh
   -b (to specify the bssid)
