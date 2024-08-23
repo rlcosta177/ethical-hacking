@@ -1,5 +1,5 @@
 # Solving the ctf 
-  1. check BSSID of target wifi with this command: `sudo iwlist scanning`
+  1. check BSSID of target wifi with this command: `nmcli dev wifi`
   1. `sudo aircrack-ng -w /usr/share/wordlists/rockyou.txt -b 02:1A:11:FF:D9:BD -e 'James Honor 8' NinjaJc01-01.cap`
   2. found the password: greeneggsandham
 
